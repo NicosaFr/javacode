@@ -40,18 +40,20 @@ public class App {
         app.run(args);
  
         System.out.println("Server started");
- 
-        runGetRequest();
+        for(int i=9; i>=0 ; i--)
+        {
+         runGetRequest(i);
+        }
     }
  
     /**
      * Performs a simple GET request and prints the result to the log.
      */
-    private static void runGetRequest() {
+    private static void runGetRequest(int cnum) {
  
     	// sample URL
         //String url = "http://ip.jsontest.com/";
-        String url = "http://129.157.179.180:3000/shield/33/45/red/NicosaFr";
+        String url = "http://129.157.179.180:3000/fighters/45/"+cnum+"/red/NicosaFr";
         CloseableHttpResponse response = null;
  
         try {
